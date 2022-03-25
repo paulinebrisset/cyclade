@@ -1,0 +1,96 @@
+@media screen and (max-width : 1460px) {
+    .fourcharts,
+    .threecharts{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width : 1360px) {
+
+    .main-container {
+        grid-template-rows: 1fr 50vh auto 1fr;
+    }
+
+    .controls {
+        font-size: 0.9rem;
+    }
+
+    #message {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width : 1210px) {
+
+    .controls {
+        gap: 2vh;
+    }
+
+    #modele-select,
+    #paramsfields {
+        padding: 3%;
+    }
+
+    .checkmark {
+        right: 0.2%;
+    }
+}
+
+@media screen and (max-width : 1050px) {
+    .fourcharts,
+    .threecharts,
+    .twocharts,
+    .onechart {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        order: 1;
+    }
+
+    form {
+        order: 2;
+        margin-bottom: 2%;
+    }
+
+    .bestTrackSelect {
+        height: 7rem;
+    }
+
+    #mapid {
+        order: 3;
+        min-height: 40vh;
+    }
+
+    #charts {
+        order: 4;
+        height: auto;
+    }
+
+    footer {
+        order: 5;
+    }
+
+    .graph,
+    #mapid {
+        min-height: 350px;
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #chart {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+}

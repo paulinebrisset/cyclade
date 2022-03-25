@@ -1,0 +1,415 @@
+/*******General features*****/
+:root {
+    --main-color: white;
+    --second-color: black;
+    --third-color: #AAD3DF;
+    --gradient-end-color: rgba(255, 255, 255, 0.36);
+    --fourth-color: rgb(161, 160, 160);
+    --map-background-popup: rgba(255, 255, 255, 0.6);
+    --graticule-color: #eed28696;
+}
+
+/*TODO comprendre qui sont before et after*/
+*,
+::before,
+::after {
+    font-family: 'Manrope', Arial;
+    box-sizing: border-box;
+    /* prendre en compte margin et padding dans le calcul de la taille des éléments*/
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: 2.5px;
+    font-weight: initial;
+}
+
+h1,
+h2,
+h4 {
+    font-family: 'Bebas Neue', 'Manrope', 'Arial';
+}
+
+
+select,
+button,
+input,
+label {
+    background-color: var(--main-color);
+    border-radius: 5px;
+    margin-top: 5%;
+}
+
+select {
+    border: solid 0.1rem var(--fourth-color);
+}
+
+button,
+input {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    /* display: inline-block; */
+    cursor: pointer;
+    color: var(--second-color);
+    font-family: inherit;
+    height: fit-content;
+}
+
+/****Pages settings***/
+
+.main-container {
+    width: 100%;
+    padding: 12px;
+    padding-right: 24px;
+    display: grid;
+    grid-template-areas: "title title"
+        "settings map"
+        "chart chart"
+        "footer footer";
+    grid-template-rows: 1fr 50vh auto 1fr;
+    grid-template-columns: 35% 65%;
+    row-gap: 0;
+    column-gap: 1%;
+    /* overflow: hidden; */
+}
+
+.main-container>header {
+    grid-area: title;
+    text-align: center;
+    align-self: center;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 10vh;
+}
+
+/******SELECTIONS*****/
+
+
+.main-container>#contrl {
+    grid-area: settings;
+    display: flex;
+    flex-direction: column;
+    border-collapse: collapse;
+    /* overflow: hidden; */
+}
+
+.controls {
+    padding-top: 0;
+    overflow-inline: clip;
+    font-size: 1rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/***Sélection de la best-track***/
+.bestTrackSelect {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 0 9%;
+    align-items: baseline;
+    min-height: 80px;
+}
+
+.bestTrackSelect label,
+.bestTrackSelect select {
+    /* margin:0; */
+    margin: auto;
+    height: 80%;
+    width: 80%;
+}
+
+/* Scrollbars inside form control, only works with Firefox browser*/
+.bestTrackSelect>select,
+#modele-select,
+#paramsfields,
+#message {
+    scroll-behavior: smooth;
+    scrollbar-color: var(--third-color) var(--main-color);
+    scrollbar-width: thin;
+}
+
+#message {
+    margin: 11px;
+    height: auto;
+    min-height: 40px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*****SELECTED DATES ***/
+
+#selected-dates {
+    border-radius: 5px;
+    display: flex;
+    gap: 3%;
+    overflow-x: clip;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.selected-date {
+    background: radial-gradient(var(--third-color) 0%, var(--gradient-end-color) 85%);
+    border: none;
+    padding: 2px;
+}
+
+.close {
+    cursor: pointer;
+    padding: 5px;
+    border-color: var(--second-color);
+}
+
+.popupDatesModeles {
+    background-color: var(--main-color);
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.dateToSelect {
+    background: radial-gradient(var(--graticule-color) 0%, var(--gradient-end-color) 85%);
+    border: none;
+}
+
+/**Sélection des paramètres et des Modèles**/
+
+.modeleparams {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    row-gap: 3px;
+    position: relative;
+}
+
+#modele-select,
+#paramsfields {
+    padding: 5%;
+    height: 100%;
+    max-height: 320px;
+    cursor: pointer;
+    overflow-y: scroll;
+}
+
+#paramsfields>:first-child,
+#modele-select>:first-child {
+    margin-top: 0 !important;
+}
+
+#modele-select {
+    grid-column: 1;
+}
+
+#paramsfields {
+    grid-column: 2;
+}
+
+.elementCache {
+    display: none;
+}
+
+#date {
+    padding-left: 2%;
+    font-size: 0.8rem;
+    bottom: 2%;
+}
+
+/*** Validation buttons ****/
+
+.controlbuttons {
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.controlbuttons button {
+    min-width: 80px;
+    width: 40%;
+    max-height: 70%;
+    padding-bottom: 1%;
+    margin-bottom: 0;
+    padding-top: 0;
+    margin-top: 9px;
+    align-self: center;
+    border: solid 0.1rem var(--second-color);
+    overflow: hidden;
+    text-align: center;
+}
+
+.controlbuttons button:hover {
+    min-width: 80px;
+    border: solid 0.1rem var(--third-color);
+}
+
+/******************* CUSTOM CHECKBOX ************/
+/*Customize the label (the container) */
+/* The container */
+.paramslabel,
+.modeleslabel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    cursor: pointer;
+
+}
+
+/* Hide the browser's default checkbox */
+.paramslabel input,
+.modeleslabel input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    align-self: unset;
+    top: 0.8vh;
+    right: 15%;
+    height: 12px;
+    width: 12px;
+    border-radius: 10px;
+}
+
+/* On mouse-over, add a grey background color */
+.paramslabel:hover input~.checkmark,
+.modeleslabel:hover input~.checkmark {
+    background-color: var(--fourth-color);
+}
+
+/* When the checkbox is checked, add a blue background */
+.paramslabel input:checked~.checkmark,
+.modeleslabel input:checked~.checkmark {
+    background-color: var(--third-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+/*A verifier*/
+.checkmark:after {
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.paramslabel input:checked~.checkmark:after,
+.modeleslabel input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.paramslabel .checkmark:after,
+.modeleslabel .checkmark:after {
+    left: 5%;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/******************* END OF CUSTOM CHECKBOX ************/
+/*****Map*******/
+.main-container>#mapid {
+    grid-area: map;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 7px;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup.tip {
+    background: var(--map-background-popup);
+    background-color: var(--map-background-popup);
+}
+
+.leaflet-popup-content {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    text-align: center;
+    margin: 4px;
+}
+
+.leaflet-popup-content>h4 {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.leaflet-popup {
+    position: absolute;
+    text-align: center;
+}
+
+/****Graph ***/
+#charts {
+    grid-area: chart;
+    width: 99%;
+    height: auto;
+}
+
+.chartlegend {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.graph {
+    margin: auto;
+    font-size: 0.8rem;
+    width: 100%;
+    height: 55vh;
+    align-self: flex-start;
+    margin-top: 5px;
+}
+
+.legend {
+    width: 90%;
+    height: 65vh;
+    align-self: center;
+}
+
+.fourcharts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.threecharts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.twocharts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.onechart {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.main-container>footer {
+    grid-area: footer;
+    margin-top: 10px;
+    background-color: var(--third-color);
+    text-align: center;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}

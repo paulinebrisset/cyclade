@@ -1,0 +1,196 @@
+{
+	"firstMap": {
+		"map": null,
+		"map_div_id": "mapid",
+		"default_lat_center": -21,
+		"default_lon_center": 55,
+		"default_zoom": 3,
+		"graticule_color": "#FF0000"
+	},
+	"icons": {
+		"iconUrl": "css/images/icones/",
+		"iconSize": [25, 25],
+		"iconAnchor": [15, 15]
+	},
+	"popup_content": {
+		"default": ["id", "type", "geometry.type", "geometry.coordinates.0", "geometry.coordinates.1"],
+		"best_track_points": ["date_point", "pmer", "units_pmer", "cap", "units_cap"],
+		"bt_ids": ["num_depr", "nom_cyc"],
+		"modele_ids": ["modele", "traqueur", "date_reseau"]
+	},
+	"colors_sorting": {
+		"ventfort": {
+			"emplacement": "maxventmax.properties.maxventmax",
+			"champs": [{
+					"value": "200",
+					"style": "#8114DB"
+				}, {
+					"value": "50",
+					"style": "#E61262"
+				},
+				{
+					"value": "40",
+					"style": "#CF3C4B"
+				},
+				{
+					"value": "35",
+					"style": "#D1432B"
+				},
+				{
+					"value": "30",
+					"style": "#E67A37"
+				},
+				{
+					"value": "20",
+					"style": "#DFAF2C"
+				},
+				{
+					"value": "10",
+					"style": "#FFE436"
+				},
+				{
+					"value": null,
+					"style": "#1D1D1B"
+				}
+			]
+		},
+		"ventfort_noref": {
+			"emplacement": "vmax.properties.valeur",
+			"champs": [{
+					"value": "200",
+					"style": "#8114DB"
+				}, {
+					"value": "102",
+					"style": "#E61262"
+				},
+				{
+					"value": "74",
+					"style": "#CF3C4B"
+				},
+				{
+					"value": "49",
+					"style": "#E67A37"
+				},
+				{
+					"value": "38",
+					"style": "#DFAF2C"
+				},
+				{
+					"value": null,
+					"style": "#1D1D1B"
+				}
+			]
+		},
+		"grandfrais": {
+			"emplacement": "maxgfrais.properties.maxraygfraisne",
+			"champs": [{
+					"value": "400",
+					"style": "#8114DB"
+				}, {
+					"value": "200",
+					"style": "#E61262"
+				},
+				{
+					"value": "150",
+					"style": "#CF3C4B"
+				},
+				{
+					"value": "100",
+					"style": "#E67A37"
+				},
+				{
+					"value": "50",
+					"style": "#DFAF2C"
+				},
+				{
+					"value": null,
+					"style": "#1D1D1B"
+				}
+			]
+		}
+
+	},
+	"points_settings": {
+		"normal": {
+			"fillOpacity": 1,
+			"radius": 2,
+			"stroke": true,
+			"weight": 0.5
+		}, 
+		"no_points" : {
+			"stroke" : false
+		}
+	},
+	"on_click": {
+		"highlight": {
+			"icon": "cyclonenoir.png",
+			"popUpContent": "bt_ids"
+		},
+		"modele": {
+			"color":"#4A919E",
+			"weight": 4,
+			"fillOpacity": 1,
+			"radius": 7,
+			"popUpContent": "modele_ids"
+		},
+		"ventfortbt": {
+			"emplacement": "vmax.geometry",
+			"style": {
+				"color": {
+					"colors_sorting": "ventfort_noref"
+				},
+				"weight": 1,
+				"opacity": 0.65
+			}
+		},
+		"ventfort": {
+			"emplacement": "maxventmax",
+			"style": {
+				"color": {
+					"colors_sorting": "ventfort"
+				},
+				"weight": 1,
+				"opacity": 1
+			}
+		},
+		"grandfrais": {
+			"emplacement": "moygfrais.geometry",
+			"style": {
+				"color": {
+					"colors_sorting": "grandfrais"
+				},
+				"weight": 1,
+				"opacity": 1
+			}
+		}
+	},
+	"trajectories_styles": {
+		"single_best_track": {
+			"weight": 1.5,
+			"opacity": 1,
+			"popup": true,
+			"points": true,
+			"popupContent": "best_track_points"
+		},
+		"single_best_track_noref": {
+			"weight": 2,
+			"opacity": 0.65,
+			"icon": "marker-shadow.png",
+			"popup": true,
+			"popupContent": "best_track_points"
+		},
+		"default": {
+			"color": "#CE6A6B",
+			"weight": 1.5,
+			"opacity": 1
+		},
+		"modele": {
+			"weight": 1,
+			"opacity": 1,
+			"icon": "marker-shadow.png",
+			"popup": true,
+			"points": true,
+			"popupContent": "best_track_points"
+		}
+	}
+}

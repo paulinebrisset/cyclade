@@ -1,0 +1,159 @@
+{
+    "baseInterval": {
+        "timeUnit": "hour",
+        "count": 6
+    },
+    "Xfield": {
+        "date": {
+            "location": {
+                "points": "properties.date",
+                "best_track": "date_point",
+                "best_track_noref": "dat",
+                "modele": "date_point"
+            }
+        }
+    },
+
+    "differentFields": {
+        "date": {
+            "best_track": "date_point",
+            "modele": "date_point"
+        },
+        "trajectories": {
+            "best_track": "systemes",
+            "modele": "previsions"
+        },
+        "idtraj": {
+            "best_track": "num_depr",
+            "modele": "date_reseau"
+        }
+    },
+    "paramsFields": {
+        "pressionmin": {
+            "location": "pmer",
+            "name": "Pression min",
+            "unit": "HPa"
+        },
+        "cap": {
+            "location": "cap",
+            "name": "Cap",
+            "unit": "DD.dd"
+        },
+        "vitesse": {
+            "location": "vitesse",
+            "name": "Vitesse",
+            "unit": "m/s"
+        },
+        "latitude": {
+            "location": "lat",
+            "name": "Latitude",
+            "unit": "DD.dd"
+        },
+        "maxgfraisne": {
+            "location": "maxgfrais.properties.maxgfraisne",
+            "name": "Grand frais (ne)",
+            "unit": "km"
+        },
+        "maxgfraisse": {
+            "location": "maxgfrais.properties.maxgfraisse",
+            "name": "Grand frais (se)",
+            "unit": "km"
+        },
+        "maxgfraissw": {
+            "location": "maxgfrais.properties.maxgfraissw",
+            "name": "Grand frais (sw)",
+            "unit": "km"
+        },
+        "maxgfraisnw": {
+            "location": "maxgfrais.properties.maxgfraisne",
+            "name": "Grand frais (nw)",
+            "unit": "km"
+        },
+        "maxventmaxne": {
+            "location": "maxventmax.properties.maxventmaxne",
+            "name": "Vent max (ne)",
+            "unit": "m/s"
+        },
+        "maxventmaxse": {
+            "location": "maxventmax.properties.maxventmaxse",
+            "name": "Vent max (se)",
+            "unit": "m/s"
+        },
+        "maxventmaxsw": {
+            "location": "maxventmax.properties.maxventmaxsw",
+            "name": "Vent max (sw)",
+            "unit": "m/s"
+        },
+        "maxventmaxnw": {
+            "location": "maxventmax.properties.maxventmaxne",
+            "name": "Vent max (nw)",
+            "unit": "m/s"
+        }
+    },
+    "style": {
+        "series_bullets": false,
+        "series_fill": false,
+        "date_format_tooltip": "MM/dd HH:mm",
+        "group_data": false,
+        "lines_connect": false,
+        "main_lines_thickness": 2,
+        "cursor_on_y": true,
+        "gridIntervals": false
+    },
+    "colors_sorting": {
+        "traqueurs": {
+            "emplacement": "traqueur",
+            "champs": [{
+                    "value": "ZF",
+                    "style": [20, 3]
+                },
+                {
+                    "value": "minpmer",
+                    "style": [0, 0]
+                }
+            ]
+        },
+        "modele": {
+            "emplacement": "modele",
+            "champs": [{
+                "value": "PA",
+                "style": "#196B9E"
+            }, {
+                "value": "PC",
+                "style": "#E64040"
+            }, {
+                "value": "PB",
+                "style": "#37D1BA"
+            }, {
+                "value": "PD",
+                "style": "#D77D6E"
+            }, {
+                "value": "PE",
+                "style": "#9E1919"
+            }, {
+                "value": "BT",
+                "style": "#1D1D1B"
+            }]
+        }
+    },
+    "trajectories_styles": {
+        "single_best_track": {
+            "color": "#100B00",
+            "dashArray": [0, 0]
+        },
+        "single_best_track_noref": {
+            "color": "#100B00"
+        },
+        "modele": {
+            "color": {
+                "colors_sorting": "modele"
+            },
+            "dashArray": {
+                "colors_sorting": "traqueurs"
+            }
+        },
+        "default": {
+            "color": "#CE6A6B"
+        }
+    }
+}

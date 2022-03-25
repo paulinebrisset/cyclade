@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cyclade</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300&display=swap');
+	</style>
+	<link rel="stylesheet" href="./css/leaflet.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+	<div class="main-container">
+		<header>
+			<h1>Cyclade</h1>
+		</header>
+		<form id="contrl">
+			<div class="bestTrackSelect">
+				<label for="bassin-select">Bassin:</label>
+				<select name="bassin-select" id="bassin-select">
+					<option value="">--Choisir--</option>
+				</select>
+
+				<label for="season-select">Saison:</label>
+				<select name="season-select" id="season-select">
+					<option value="">--Choisir--</option>
+				</select>
+
+				<label for="trajet-select">Système:</label>
+				<select name="trajet-select" id="trajet-select">
+					<option value="">--Choisir--</option>
+				</select>
+			</div>
+			<div class="controls">
+
+				<section id="message">
+					<div id="datesinfo" class="elementCache">Dates du système sélectionné :</div>
+					<ul id="selected-dates">
+
+					</ul>
+				</section>
+
+				<div class="modeleparams">
+					<div id="modele-select"></div>
+					<div id="paramsfields"></div>
+				</div>
+			</div>
+
+			<div class="controlbuttons">
+				<button type="button" id="removeLayers">Vider la carte</button>
+				<button type="button" id="submit">Graphique</button>
+			</div>
+		</form>
+
+		<div id="mapid"></div>
+
+		<div id="charts">
+			<div class="chartlegend">
+				<div id="chart1" class="graph"></div>
+				<div id="legend1" class="legend"></div>
+			</div>
+			<div class="chartlegend">
+				<div id="chart2" class="graph"></div>
+				<div id="legend2" class="legend"></div>
+			</div>
+			<div class="chartlegend">
+				<div id="chart3" class="graph"></div>
+				<div id="legend3" class="legend"></div>
+			</div>
+			<div class="chartlegend">
+				<div id="chart4" class="graph"></div>
+				<div id="legend4" class="legend"></div>
+			</div>
+
+		</div>
+
+		<footer>Lacy</footer>
+	</div>
+
+	<!--JQuery-->
+	<script type="text/javascript" src="./js/jquery/jquery.min.js"></script>
+
+	<!--LEAFLET-->
+	<script type="text/javascript" src="./js/leaflet/leaflet.js"></script>
+	<script type="text/javascript" src="./js/leaflet/leaflet.latlng-graticule.js"></script>
+
+	<!--amCharts 5 -->
+	<script type="text/javascript" src="./js/amcharts/index.js"></script>
+	<script type="text/javascript" src="./js/amcharts/xy.js"></script>
+	<script type="text/javascript" src="./js/amcharts/Animated.js"></script>
+
+	<!-- Dayjs -->
+	<script type="text/javascript" src="./js/dayjs/dayjs.min.js"></script>
+	<script type="text/javascript" src="./js/dayjs/dayjs-plugin-utc.js"></script>
+	<script>
+		dayjs.extend(dayjsPluginUTC.default)
+	</script>
+
+	<!-- MON JS-->
+	<script type="module" src="./js/cyclade/cycladecontroller.js"></script>
+	<script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+{
+    "selectors": {
+        "bassinselectid": "bassin-select",
+        "saisonselectid": "season-select",
+        "trajectoireselectid": "trajet-select",
+        "params": {
+            "divId": "paramsfields",
+            "classNameLabel": "paramslabel",
+            "classNameCheck": "paramscheck"
+        },
+        "modeles": {
+            "divId": "modele-select",
+            "classNameLabel": "modeleslabel",
+            "classNameCheck": "modelescheck"
+        },
+        "datesinfoid": "datesinfo",
+        "clickableDates": "popupDatesModeles elementCache",
+        "selectedDatesParent": "selected-dates",
+        "selectedDateClassName": "selected-date",
+        "submitid": "submit",
+        "emptymapid" : "removeLayers",
+        "chartsid": "charts",
+        "chartsClassNames": {
+            "1": "onechart",
+            "2": "twocharts",
+            "3": "threecharts",
+            "4": "fourcharts"
+        }
+    },
+    "identifiantsTrajs": {
+        "valueForAll": "a",
+        "fields": ["num_depr", "nom_cyc"],
+        "idField": "num_depr"
+    },
+    "chartsIds": [
+        ["chart1", "legend1"],
+        ["chart2", "legend2"],
+        ["chart3", "legend3"],
+        ["chart4", "legend4"]
+    ],
+    "best_track_directory": "data/geoJSON/out_ref_bt/",
+    "modeles_directory": "data/geoJSON/out_modele/",
+    "meta_directory": "data/geoJSON/meta/",
+    "best_track_files": {
+        "SWIO": [
+            "reference.trajectoires.SWIO.BT.CMRS.20012002.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20022003.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20032004.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20042005.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20052006.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20062007.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20072008.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20082009.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20092010.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20102011.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20112012.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20122013.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20132014.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20142015.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20152016.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20162017.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20172018.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20182019.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20192020.json",
+            "reference.trajectoires.SWIO.BT.CMRS.20202021.json"
+        ],
+        "Atlantique": [
+            "reference.trajectoires.ATL.BT.CMRS.2014.json",
+            "reference.trajectoires.ATL.BT.CMRS.2015.json",
+            "reference.trajectoires.ATL.BT.CMRS.2016.json",
+            "reference.trajectoires.ATL.BT.CMRS.2017.json",
+            "reference.trajectoires.ATL.BT.CMRS.2018.json",
+            "reference.trajectoires.ATL.BT.CMRS.2019.json",
+            "reference.trajectoires.ATL.BT.CMRS.2020.json"
+        ],
+        "Nep": [
+            "reference.trajectoires.NEP.CMRS.CMRS.2018.json",
+            "reference.trajectoires.NEP.CMRS.CMRS.2019.json",
+            "reference.trajectoires.NEP.CMRS.CMRS.2020.json",
+            "reference.trajectoires.NEP.CMRS.CMRS.2021.json"
+        ],
+        "Aust": [
+            "reference.trajectoires.AUST.BT_DIRNC.CMRS.20122013.json",
+            "reference.trajectoires.AUST.BT_DIRNC.CMRS.20132014.json",
+            "reference.trajectoires.AUST.BT_DIRNC.CMRS.20142015.json",
+            "reference.trajectoires.AUST.BT_DIRNC.CMRS.20152016.json",
+            "reference.trajectoires.AUST.BT_DIRNC.CMRS.20162017.json",
+            "reference.trajectoires.AUST.BT_DIRNC.CMRS.20172018.json"
+        ],
+        "NWP": [
+            "reference.trajectoires.NWP.CMRS.CMRS.2004.json",
+            "reference.trajectoires.NWP.CMRS.CMRS.2005.json",
+            "reference.trajectoires.NWP.CMRS.CMRS.2006.json",
+            "reference.trajectoires.NWP.CMRS.CMRS.2007.json"
+        ]
+    },
+    "modeles_files": {
+        "SWIO": {
+            "20092010": {
+                "4": ["modele.trajectoires.PA.SWIO.CMRS.ZF.20092010.4.json",
+                    "modele.trajectoires.PA.SWIO.CMRS.minpmer.20092010.4.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.minpmer.20092010.4.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.ZF.20092010.4.json"
+                ],
+                "5": ["modele.trajectoires.PA.SWIO.CMRS.ZF.20092010.5.json",
+                    "modele.trajectoires.PA.SWIO.CMRS.minpmer.20092010.5.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.minpmer.20092010.5.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.ZF.20092010.5.json"
+                ],
+                "6": ["modele.trajectoires.PA.SWIO.CMRS.ZF.20092010.6.json",
+                    "modele.trajectoires.PA.SWIO.CMRS.minpmer.20092010.6.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.minpmer.20092010.6.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.ZF.20092010.6.json"
+                ],
+                "7": ["modele.trajectoires.PA.SWIO.CMRS.ZF.20092010.7.json",
+                    "modele.trajectoires.PA.SWIO.CMRS.minpmer.20092010.7.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.minpmer.20092010.7.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.ZF.20092010.7.json"
+                ],
+                "8": ["modele.trajectoires.PA.SWIO.CMRS.ZF.20092010.8.json",
+                    "modele.trajectoires.PA.SWIO.CMRS.minpmer.20092010.8.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.minpmer.20092010.8.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.ZF.20092010.8.json"
+                ],
+                "9": ["modele.trajectoires.PA.SWIO.CMRS.ZF.20092010.9.json",
+                    "modele.trajectoires.PA.SWIO.CMRS.minpmer.20092010.9.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.minpmer.20092010.9.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.ZF.20092010.9.json"
+                ],
+                "10": ["modele.trajectoires.PA.SWIO.CMRS.ZF.20092010.10.json",
+                    "modele.trajectoires.PA.SWIO.CMRS.minpmer.20092010.10.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.minpmer.20092010.10.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.ZF.20092010.10.json"
+                ],
+                "11": ["modele.trajectoires.PA.SWIO.CMRS.ZF.20092010.11.json",
+                    "modele.trajectoires.PA.SWIO.CMRS.minpmer.20092010.11.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.minpmer.20092010.11.json",
+                    "modele.trajectoires.PC.SWIO.CMRS.ZF.20092010.11.json"
+                ]
+            }
+        }
+    },
+    "modeles_meta_files": {
+        "SWIO": {
+            "20092010": {
+                "4": "meta.modele.trajectoires.CMRS.SWIO.20092010.4.json",
+                "5": "meta.modele.trajectoires.CMRS.SWIO.20092010.5.json",
+                "6": "meta.modele.trajectoires.CMRS.SWIO.20092010.6.json",
+                "7": "meta.modele.trajectoires.CMRS.SWIO.20092010.7.json",
+                "8": "meta.modele.trajectoires.CMRS.SWIO.20092010.8.json",
+                "9": "meta.modele.trajectoires.CMRS.SWIO.20092010.9.json",
+                "10": "meta.modele.trajectoires.CMRS.SWIO.20092010.10.json",
+                "11": "meta.modele.trajectoires.CMRS.SWIO.20092010.11.json",
+                "12": "meta.modele.trajectoires.CMRS.SWIO.20092010.12.json"
+            }
+        }
+    }
+}
